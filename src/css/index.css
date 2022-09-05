@@ -1,0 +1,130 @@
+* {
+    background-color: green;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.container h1 {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container .players-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .players-container .first {
+    transform: rotate(90deg);
+}
+
+.container .players-container .last {
+    transform: rotate(-90deg);
+}
+
+.container .players-container .player h3 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container .players-container .player .hand {
+    min-height: 140px;
+}
+
+.container .players-container .row {
+    flex-grow: 1;
+}
+
+.container .players-container .row .center:first-child {
+    margin-bottom: 150px;
+}
+
+.hand {
+    position: relative; 
+}
+
+.card {
+    background: #efe1a9 url('../images/card-set.png') no-repeat;
+    background-size: 1300% 400%;
+    height: 142px;
+    width: 103px;
+    background-color: #fff;
+    border: 1px solid #695d39;
+    border-radius: 8px;                       
+    box-shadow: -4px 4px 8px -4px #000; 
+    font-family: 'Times', serif;
+    line-height: 16px;
+    padding-top: 4px;
+    padding-left: 1.5px;
+    letter-spacing: -1px;
+    position: absolute;
+}
+
+/* SUITS */
+.C { background-position-y: 0;       color: #000; }
+.D { background-position-y: -145.6px; color: #890000; }
+.S { background-position-y: -291.2px; color: #000; }
+.H { background-position-y: -436.8px;    color: #890000; }
+
+/* RANKS */
+.rankA  { background-position-x: 0; }
+.rank2  { background-position-x: -104px; }
+.rank3  { background-position-x: -208px; }
+.rank4  { background-position-x: -312px; }
+.rank5  { background-position-x: -416px; }
+.rank6  { background-position-x: -520px; }
+.rank7  { background-position-x: -624px; }
+.rank8  { background-position-x: -728px; }
+.rank9  { background-position-x: -832px; }
+.rank10 { background-position-x: -936px;}
+.rankJ  { background-position-x: -1040px; }
+.rankQ  { background-position-x: -1144px; }
+.rankK  { background-position-x: -1248px; }
+
+/* HANDS */
+
+.hand .card:nth-of-type(1) { left: 0; }
+.hand .card:nth-of-type(2) { left: 20px; }
+.hand .card:nth-of-type(3) { left: 40px; }
+.hand .card:nth-of-type(4) { left: 60px; }
+.hand .card:nth-of-type(5) { left: 80px; }
+.hand .card:nth-of-type(6) { left: 100px; }
+.hand .card:nth-of-type(7) { left: 120px; }
+.hand .card:nth-of-type(8) { left: 140px; }
+.hand .card:nth-of-type(9) { left: 160px; }
+.hand .card:nth-of-type(10) { left: 180px; }
+.hand .card:nth-of-type(11) { left: 200px; }
+.hand .card:nth-of-type(12) { left: 220px; }
+.hand .card:nth-of-type(13) { left: 240px; }
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
