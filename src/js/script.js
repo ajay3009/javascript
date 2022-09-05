@@ -61,13 +61,11 @@ Player.prototype.calculateScore = function () {
 
 function CardGame() {
   this.element = document.getElementById("game");
-  console.log(this.element);
   this.deck = [];
   this.players = [];
   this.createDeck();
   this.shuffleCards();
   this.element.addEventListener("click", (event) => {
-    console.log(event);
     const { btn } = event.target.dataset;
     if (btn === "shuffle") {
       this.shuffleCards.call(this);

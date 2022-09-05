@@ -9,6 +9,7 @@ Guide users through getting your code up and running on their own system. In thi
 - [Installation process](#installation)
 - [Usage](#usage)
 - [Testing](#test)
+- [App Description](#description)
 
 ## Installation
 
@@ -30,7 +31,7 @@ Preview of the app:
 
 ![alt text](https://github.com/ajay3009/javascript/blob/main/src/images/Game_Snapshot.JPG)
 
-## Testing
+## Test
 
 To test the app :
 
@@ -41,3 +42,40 @@ npm test
 Preview of test cases:
 
 ![alt text](https://github.com/ajay3009/javascript/blob/main/src/images/testing_snapshot.JPG)
+
+## Description
+
+**Player** class is defined in ES5 that contains name, cards for each player and total score.
+
+```
+function Player(name) {
+  this.name = name;
+  this.cards = [];
+  this.score = 0;
+}
+
+```
+
+Following methods defined for Player Class :
+
+1. **Hand** : To get the cards in a hand.
+2. **calculateScore** : To calculate the score of the player.
+
+
+**CardGame** class is defined in ES5 that contains element, deck array, players array.
+
+```
+function CardGame() {
+  this.element = document.getElementById("game");
+  this.deck = [];
+  this.players = [];
+}
+```
+
+Following methods defined for CardGame Class :
+
+1. **initPlayers** : To initialize each players with default values.
+2. **createDeck**: Create deck for the card game.
+3. **shuffleCards** : Shuffle card method.
+4. **displayCards** : Display card on the UI.
+
