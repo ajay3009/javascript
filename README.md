@@ -45,6 +45,21 @@ Preview of test cases:
 
 ## Description
 
+Each Player name is appended with the current score of the hand using following logic
+
+**An Ace is worth four points, a King is worth three points, a Queen is worth two, and a Jack is worth one. Other cards are not worth points.**
+
+```
+North (5)
+```
+
+**Assumptions**:
+
+```diff
+- Currently the score of each player is not hidden.
+- Cards for opposite team is also not hidden.
+```
+
 **Player** class is defined in ES5 that contains name, cards for each player and total score.
 
 ```
@@ -60,7 +75,6 @@ Following methods defined for Player Class :
 
 1. **Hand** : To get the cards in a hand.
 2. **calculateScore** : To calculate the score of the player.
-
 
 **CardGame** class is defined in ES5 that contains element, deck array, players array.
 
@@ -78,4 +92,3 @@ Following methods defined for CardGame Class :
 2. **createDeck**: Create deck for the card game.
 3. **shuffleCards** : Shuffle card method.
 4. **displayCards** : Display card on the UI.
-
