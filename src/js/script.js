@@ -31,8 +31,8 @@ const CARD_VALUES = {
 };
 
 /**
- *
- * @param {*} name
+ * Class Player
+ * @param {string} name The name of the player
  */
 
 function Player(name) {
@@ -42,9 +42,10 @@ function Player(name) {
 }
 
 /**
- *
- * @param {*} deck
+ * Method to generate a hand for the player
+ * @param {Array Cards[]} deck Array of cards
  */
+
 Player.prototype.hand = function (deck) {
   this.cards = [];
   while (this.cards.length < 13) {
@@ -53,12 +54,19 @@ Player.prototype.hand = function (deck) {
   }
 };
 
+/**
+ * Method to calculate score of the player
+ */
+
 Player.prototype.calculateScore = function () {
   this.cards.forEach((item) => {
     this.score += CARD_VALUES[item.rank] || 0;
   });
 };
 
+/**
+ * Class CardGame
+ */
 function CardGame() {
   this.element = document.getElementById("game");
   this.deck = [];
@@ -73,6 +81,10 @@ function CardGame() {
   });
 }
 
+/**
+ * Method to initiliza players with default values
+ */
+
 CardGame.prototype.initPlayers = function () {
   this.players = [];
   PLAYER_NAMES.forEach((name, index) => {
@@ -82,6 +94,10 @@ CardGame.prototype.initPlayers = function () {
     this.players.push(player);
   });
 };
+
+/**
+ * Method to create deck for the card game.
+ */
 
 CardGame.prototype.createDeck = function () {
   this.deck = [];
@@ -95,6 +111,10 @@ CardGame.prototype.createDeck = function () {
   }
 };
 
+/**
+ * Method to shuffle the cards in the game.
+ */
+
 CardGame.prototype.shuffleCards = function () {
   for (let index = this.deck.length - 1; index > -1; index -= 1) {
     randomCard = Math.floor(Math.random() * index);
@@ -106,6 +126,10 @@ CardGame.prototype.shuffleCards = function () {
   this.initPlayers();
   this.displayCards();
 };
+
+/**
+ * Method to display the cards for the player.
+ */
 
 CardGame.prototype.displayCards = function () {
   this.players.forEach((player) => {
