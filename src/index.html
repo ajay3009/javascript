@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridge Game</title>
-    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
+
 <body>
     <section id="game" class="container" role="main">
         <h1>Bridge Game</h1>
         <button id="shuffle-btn" type="button" data-btn="shuffle">Shuffle</button>
         <div class="players-container">
             <div class="player row first">
-                <h3>West</h3>
-                <div class="hand" id="west"></div>
+                <div class="west">
+                    <h3>West</h3>
+                    <div class="hand">
+                        <div id="west"></div>
+                    </div>
+                </div>
+
             </div>
             <div class="row">
                 <div class="player center">
@@ -27,8 +34,10 @@
                 </div>
             </div>
             <div class="player row last">
-                <h3>East</h3>
-                <div class="hand" id="east"></div>
+                <div class="east">
+                    <h3>East</h3>
+                    <div class="hand" id="east"></div>
+                </div>
             </div>
         </div>
     </section>

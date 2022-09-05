@@ -25,6 +25,10 @@
     justify-content: center;
     align-items: center;
 }
+.player{
+    width: 340px;
+    margin: 0px auto;
+}
 
 .container .players-container .first {
     transform: rotate(90deg);
@@ -32,6 +36,10 @@
 
 .container .players-container .last {
     transform: rotate(-90deg);
+}
+
+.container .players-container .player {
+    position: relative;
 }
 
 .container .players-container .player h3 {
@@ -43,8 +51,17 @@
     min-height: 140px;
 }
 
-.container .players-container .row {
-    flex-grow: 1;
+.container .players-container .player .east{
+    width: 100%;
+    margin-left: -6%;
+    display: flex;
+    flex-direction: column;
+}
+.container .players-container .player .west{
+    width: 100%;
+    margin-top: -6%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container .players-container .row .center:first-child {
